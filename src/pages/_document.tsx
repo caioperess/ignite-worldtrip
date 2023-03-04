@@ -3,7 +3,13 @@ import { Html, Head, Main, NextScript } from "next/document";
 export default function Document() {
   return (
     <Html lang="pt-br">
-      <Head />
+      <Head>
+        <link
+          rel="shortcut icon"
+          href="/earth.svg"
+          type="image/x-icon"
+        />
+      </Head>
       <body>
         <Main />
         <NextScript />

@@ -1,38 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+  <img alt="Logo" src=".github/logo.svg" width="200px">
+</h1>
 
-## Getting Started
+<h3 align="center">
+  NextJS Application for Worldtrip project
+</h3>
 
-First, run the development server:
+<p align="center">
+  <img src="./.github/worldtrip.png">
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/caioperess/ignite-worldtrip?color=%23FFBA08">
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  <a href="https://www.linkedin.com/in/caioperess/" target="_blank" rel="noopener noreferrer">
+    <img alt="Made by" src="https://img.shields.io/badge/made%20by-%20caio%20peres-%23FFBA08">
+  </a>
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/caioperess/ignite-worldtrip?color=%23FFBA08">
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+  <a href="https://github.com/caioperess/ignite-worldtrip/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/caioperess/ignite-worldtrip?color=%23FFBA08">
+  </a>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+  <a href="https://github.com/caioperess/ignite-worldtrip/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/caioperess/ignite-worldtrip?color=%23FFBA08">
+  </a>
+</p>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<p align="center">
+  <a href="#%EF%B8%8F-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-technologies">Technologies</a>
+</p>
 
-## Learn More
+## 🚀 Technologies
 
-To learn more about Next.js, take a look at the following resources:
+Technologies that I used to develop this application
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [ReactJS](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [NextJS](https://nextjs.org/)
+- [ChakraUI](https://chakra-ui.com/)
+- [Swiper](https://swiperjs.com/)
+- [Prismic CMS](https://prismic.io/)

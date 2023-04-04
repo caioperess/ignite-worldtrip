@@ -1,12 +1,16 @@
+import { ContinentProps } from "@/dtos/continent";
 import { Box, Flex, Heading } from "@chakra-ui/react";
 
-export function ContinentBanner() {
+type ContinentBannerProps = {
+  continent: ContinentProps;
+};
+
+export function ContinentBanner({ continent }: ContinentBannerProps) {
   return (
     <Flex
-      
       h={["300px", "400px", "400px", "500px"]}
       align="flex-end"
-      bgImage="/america2.jpg"
+      bgImage={continent.banner}
       bgRepeat="no-repeat"
       bgSize="cover"
       bgPos="center"
@@ -19,7 +23,7 @@ export function ContinentBanner() {
         fontWeight="semibold"
         fontSize={["2xl", "3xl", "4xl", "5xl"]}
       >
-        América do Sul
+        {continent.title}
       </Heading>
     </Flex>
   );

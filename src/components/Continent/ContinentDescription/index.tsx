@@ -1,7 +1,12 @@
+import { ContinentProps } from "@/dtos/continent";
 import { Flex, SimpleGrid, Text, Icon } from "@chakra-ui/react";
 import { FiInfo } from "react-icons/fi";
 
-export function ContinentDescription() {
+type ContinentDescriptionProps = {
+  continent: ContinentProps;
+};
+
+export function ContinentDescription({ continent }: ContinentDescriptionProps) {
   return (
     <SimpleGrid
       maxW="1160px"
@@ -17,10 +22,7 @@ export function ContinentDescription() {
         textAlign="justify"
         color="dark.text"
       >
-        A Europa é, por convenção, um dos seis continentes do mundo.
-        Compreendendo a península ocidental da Eurásia, a Europa geralmente
-        divide-se da Ásia a leste pela divisória de águas dos montes Urais, o
-        rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste
+        {continent.description}
       </Text>
 
       <Flex
@@ -34,7 +36,7 @@ export function ContinentDescription() {
             color="yellow.400"
             fontSize={["2xl", "3xl", "4xl", "5xl"]}
           >
-            50
+            {continent.countries}
           </Text>
           <Text
             fontWeight="semibold"
@@ -51,7 +53,7 @@ export function ContinentDescription() {
             color="yellow.400"
             fontSize={["2xl", "3xl", "4xl", "5xl"]}
           >
-            60
+            {continent.languages}
           </Text>
           <Text
             fontWeight="semibold"
@@ -68,7 +70,7 @@ export function ContinentDescription() {
             color="yellow.400"
             fontSize={["2xl", "3xl", "4xl", "5xl"]}
           >
-            27
+            {continent.cities}
           </Text>
           <Text
             display="flex"

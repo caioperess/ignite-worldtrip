@@ -1,11 +1,16 @@
+import { CitiesListProps } from "@/dtos/continent";
 import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 
-export function CitieCard() {
+type CitieCardProps = {
+  city: CitiesListProps;
+};
+
+export function CitieCard({ city }: CitieCardProps) {
   return (
     <Flex bgColor="white" borderRadius="4px" direction="column">
       <Box as="header" h={["200px", "200px", "170px", "170px"]}>
         <Image
-          src="/africa2.jpg"
+          src={city.thumb}
           objectFit="cover"
           w="100%"
           h="100%"
@@ -27,7 +32,7 @@ export function CitieCard() {
             fontSize={["sm", "md", "lg", "xl"]}
             as="h3"
           >
-            Londres
+            {city.title}
           </Heading>
 
           <Text
@@ -35,13 +40,13 @@ export function CitieCard() {
             fontSize={["xs", "xs", "xs", "md"]}
             color="dark.info"
           >
-            Reino Unido
+            {city.country}
           </Text>
         </Flex>
 
         <Box w="30px" h="30px" borderRadius="50%">
           <Image
-            src="/england.png"
+            src={city.flag}
             w="100%"
             h="100%"
             borderRadius="50%"

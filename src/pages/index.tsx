@@ -5,8 +5,15 @@ import { Slide } from "@/components/Slide";
 import { Details } from "@/components/Details";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import Head from "next/head";
+import { GetStaticProps } from "next";
+import { getPrismicClient } from "prismicio";
+import { ContinentDTO, ContinentProps } from "@/dtos/continent";
 
-export default function Home() {
+type HomeProps = {
+  continents: ContinentProps[];
+};
+
+export default function Home({ continents }: HomeProps) {
   return (
     <Box>
       <Head>
@@ -38,9 +45,34 @@ export default function Home() {
         </Text>
       </FlexContainer>
 
-      <FlexContainer h="450px" align="center" justify="center" mb="3.25rem" p="4">
-        <Slide />
+      <FlexContainer
+        h="450px"
+        align="center"
+        justify="center"
+        mb="3.25rem"
+        p="4"
+      >
+        <Slide continents={continents} />
       </FlexContainer>
     </Box>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const prismic = getPrismicClient();
+
+  const response = await prismic.getAllByType("continent", {
+    fetch: ["continent.title", "continent.summary", "continent.slide"],
+  });
+
+  const continents = response.map((continent) => ({
+    slug: continent.uid,
+    title: continent.data.title,
+    summary: continent.data.summary,
+    slide: continent.data.slide.url,
+  }));
+
+  return {
+    props: { continents },
+  };
+};

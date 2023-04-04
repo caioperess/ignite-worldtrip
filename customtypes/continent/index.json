@@ -1,0 +1,113 @@
+{
+  "id": "continent",
+  "label": "continent",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "id",
+          "placeholder": ""
+        }
+      },
+      "summary": {
+        "type": "Text",
+        "config": {
+          "label": "summary",
+          "placeholder": ""
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "title",
+          "placeholder": ""
+        }
+      },
+      "description": {
+        "type": "Text",
+        "config": {
+          "label": "description",
+          "placeholder": ""
+        }
+      },
+      "slide": {
+        "type": "Image",
+        "config": {
+          "label": "slide",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "banner": {
+        "type": "Image",
+        "config": {
+          "label": "banner",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "countries": {
+        "type": "Number",
+        "config": {
+          "label": "countries",
+          "placeholder": ""
+        }
+      },
+      "languages": {
+        "type": "Number",
+        "config": {
+          "label": "languages",
+          "placeholder": ""
+        }
+      },
+      "cities": {
+        "type": "Number",
+        "config": {
+          "label": "cities",
+          "placeholder": ""
+        }
+      },
+      "cities_list": {
+        "type": "Group",
+        "config": {
+          "label": "cities_list",
+          "fields": {
+            "title": {
+              "type": "Text",
+              "config": {
+                "label": "title",
+                "placeholder": ""
+              }
+            },
+            "country": {
+              "type": "Text",
+              "config": {
+                "label": "country",
+                "placeholder": ""
+              }
+            },
+            "thumb": {
+              "type": "Image",
+              "config": {
+                "label": "thumb",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "flag": {
+              "type": "Image",
+              "config": {
+                "label": "flag",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

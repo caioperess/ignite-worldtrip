@@ -1,7 +1,12 @@
 import { Flex, Heading, SimpleGrid } from "@chakra-ui/react";
 import { CitieCard } from "./CitieCard";
+import { ContinentProps } from "@/dtos/continent";
 
-export function ContinentCities() {
+type ContinentCitiesProps = {
+  continent: ContinentProps;
+};
+
+export function ContinentCities({ continent }: ContinentCitiesProps) {
   return (
     <Flex
       maxW="1160px"
@@ -30,13 +35,9 @@ export function ContinentCities() {
         }}
         gridGap="2.875rem"
       >
-        <CitieCard />
-        <CitieCard />
-        <CitieCard />
-        <CitieCard />
-        <CitieCard />
-        <CitieCard />
-        <CitieCard />
+        {continent.cities_list.map((city) => (
+          <CitieCard city={city} />
+        ))}
       </SimpleGrid>
     </Flex>
   );
